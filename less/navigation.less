@@ -1,1 +1,60 @@
 // Navigation code here
+
+nav {
+    background-color: rgb(238, 238, 238);
+    padding: 15px 0;
+    .flex(column);
+    animation-name: navBG;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    .navLogo {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    
+    .navItems {
+        width: 40%;
+        margin: 0 auto;
+        .flex(row);
+        .centerNav();
+        padding-top: 10px;
+
+        @media @phone {
+            width: 90%;
+        }
+
+        a {
+            animation-name: navFont;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+            &:hover {
+                color: black;
+                font-size: 1.7rem;
+            }
+        }
+    }
+}
+
+// Animations
+
+@keyframes navBG {
+    from {
+        background-color: rgb(238, 238, 238)
+    }
+    to {
+        background-color: black;
+    }
+}
+
+@keyframes navFont {
+    from {
+        color: header-font-color;
+    }
+    to {
+        color: white;
+    }
+}
